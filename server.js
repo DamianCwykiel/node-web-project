@@ -62,11 +62,11 @@ app.get('/', (req, res) => {
 });
 
 //2nd hendler - hbs page deployed
-//about-Page
+//about-Page, skills, cv
 app.get('/about', (req, res) => {
   //res.send('AboutMe Page');
   res.render('about.hbs', {
-    pageTitle: 'Welcome to my WebPage!',
+    pageTitle: 'About Page!',
     pageSubtitle: 'This is my about page section of WebPage'
   });
 });
@@ -79,7 +79,24 @@ app.get('/projects', (req, res) => {
   })
 });
 
+//contact
+app.get('/contact', (req, res) => {
+  res.render('contact.hbs', {
+    pageTitle: 'Contact',
+    pageSubtitle: 'Leave a message'
+  })
+});
+
+//blog
+app.get('/blog', (req, res) => {
+  res.render('blog.hbs', {
+    pageTitle: 'Blog',
+    pageSubtitle: 'Share your thoughts with others'
+  })
+});
+
 //3rd hendler
+//error-Page
 app.get('/error', (req, res) => {
   res.send({
     errorMessage: '404 - error message!'
