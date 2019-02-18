@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const app = express();
-const port = 3000
+const port = process.env.PORT || 3000;
 
 //configuration for partial
 hbs.registerPartials(__dirname + '/views/partials')
@@ -79,5 +79,5 @@ app.get('/error', (req, res) => {
 
 //server
 app.listen(`${port}`, () => {
-  console.log('Server is alive on port 3000!');
+  console.log(`Server is alive on port ${port}`);
 });
