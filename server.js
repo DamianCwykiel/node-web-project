@@ -53,7 +53,7 @@ hbs.registerHelper('screamIt', (text) => {
 //   });
 // });
 
-//homePage
+//home-Page
 app.get('/', (req, res) => {
   res.render('homePage.hbs', {
     pageTitle: 'Home Page',
@@ -62,12 +62,21 @@ app.get('/', (req, res) => {
 });
 
 //2nd hendler - hbs page deployed
+//about-Page
 app.get('/about', (req, res) => {
   //res.send('AboutMe Page');
   res.render('about.hbs', {
     pageTitle: 'Welcome to my WebPage!',
     pageSubtitle: 'This is my about page section of WebPage'
   });
+});
+
+//projects-Page
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'My Projects',
+    pageSubtitle: 'Check how they work!'
+  })
 });
 
 //3rd hendler
