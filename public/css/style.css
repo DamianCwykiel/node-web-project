@@ -5,13 +5,13 @@
 }
 
 html {
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 body {
   background-color:rgb(238, 238, 213);;
   font-family: helvetica, arial;
-  overflow-y: hidden;
+  overflow-x: hidden;
   position: absolute; /*scrollbar  */
 }
 
@@ -61,6 +61,12 @@ a {
   font-weight: 700;
   text-align: center;
   text-decoration: none;
+}
+
+.a-tag {
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 li.offer:hover {
@@ -126,7 +132,7 @@ nav {
 
 .img-icons:hover {
   cursor: pointer;
-  transition: 0.2s linear;
+  transition: 0.5s ease-in-out;
   transform: translateY(5px);
 }
 
@@ -140,7 +146,6 @@ main {
 
 .main-content {
   align-items: center;
-  background: #555;
   display: inline-flex;
   flex-direction: column;
   width: 100vw;
@@ -171,6 +176,10 @@ main {
   margin: 2rem 0;
 }
 
+#progile-img:hover {
+  transform: rotateY(160deg);
+}
+
 #courses {
   background-color:rgb(238, 238, 213);
 }
@@ -185,8 +194,23 @@ main {
   list-style-type: none; 
 }
 
-.courses-container, .projects-container {
+.courses-container {
   align-items: center;
+}
+
+.projects-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container-items {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-column-gap: 3rem;
+  justify-content: center;
+  word-break: break-all;
 }
 
 .courses-items-title, .projects-items-title {
@@ -230,8 +254,14 @@ main {
 }
 
 .projects-item {
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   text-align: center;
+  width: 30rem;
+}
+
+.projects-item:hover {
+  transform: scale(1.03);
+  transition: 0.4s ease-in-out; 
 }
 
 #bottom-content {
@@ -298,6 +328,7 @@ main {
   color: white;
   font-size: 18px;
   font-weight: 600;
+  position: static;
   margin: 25px 10rem;
 }
 
@@ -346,6 +377,7 @@ h3 {
 }
 
 .contact-benefit-item {
+  font-size: 14px;
   width: 22rem;
   word-break: break-all;
 }
@@ -394,3 +426,119 @@ footer p {
   opacity: 1;
   transition: 0.4s ease-in-out;
 }
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+.icon-side-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-side-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-side-bar a:hover {
+  background-color: #000;
+  transform: rotateY(25deg);
+
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+@media screen and (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+   }
+
+  .top-nav-ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto    ------ slider
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+  transform: rotateX(50deg);
+
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+
+*/
