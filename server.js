@@ -1,12 +1,22 @@
+const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const http = require('http');
 const fs = require('fs');
 
-const app = express();
 const port = process.env.PORT || 3000;
+const app = express();
+
+const publicPath = path.join(__dirname, './public/index.html');
+
+//create Http server
+const server = http.createServer(app);
+
+app.use(express.static(publicPath));
 
 //configuration for partial
-hbs.registerPartials(__dirname + '/views/partials')
+hbs.registerPartials(__dirname + './views/partials');
+
 //hbs config in express
 app.set('view engine', 'hbs');
 
@@ -55,9 +65,9 @@ hbs.registerHelper('screamIt', (text) => {
 
 //home-Page
 app.get('/', (req, res) => {
-  res.render('homePage.hbs', {
+  res.render('./views/maintenance.hbs', {
     pageTitle: 'Home Page',
-    pageSubtitle: 'This is my home page!'
+    pageSubtitle: 'This is my home page!',
   });
 });
 
@@ -65,9 +75,9 @@ app.get('/', (req, res) => {
 //about-Page, skills, cv
 app.get('/about', (req, res) => {
   //res.send('AboutMe Page');
-  res.render('about.hbs', {
+  res.render('./views/about.hbs', {
     pageTitle: 'About Page!',
-    pageSubtitle: 'This is my about page section of WebPage'
+    pageSubtitle: 'This is my about page section of WebPage',
   });
 });
 
@@ -88,7 +98,7 @@ app.get('/contact', (req, res) => {
 });
 
 //blog
-app.get('/blog', (req, res) => {
+app.get('./views/blog.hbs', (req, res) => {
   res.render('blog.hbs', {
     pageTitle: 'Blog',
     pageSubtitle: 'Share your thoughts with others'
