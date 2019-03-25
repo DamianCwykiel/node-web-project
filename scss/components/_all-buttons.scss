@@ -1,0 +1,123 @@
+.button {
+  height: 5rem;
+  width: 10rem;
+  font-weight: 900; 
+}
+
+#courses-button {
+  border: 1px solid $medium-red;
+  border-radius: 5px;
+  background: transparent;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  position: static;
+  margin: 25px 10rem; 
+}
+
+#courses-button:hover {
+  background: $medium-red;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.contact-side-icon {
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  background: url("img/1-contact-side-icon.png") no-repeat 0 0;
+  position: fixed;
+  right: 70px;
+  bottom: 70px;
+  z-index: 1;
+   opacity: 0.5; 
+}
+  
+.contact-side-icon:hover {
+  opacity: 1;
+  transition: 0.4s ease-in-out; 
+}
+  
+.content {
+  margin-left: 75px;
+  font-size: 30px; 
+} 
+  
+.icon-side-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); 
+}
+  
+.icon-side-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: $white;
+  font-size: 20px; 
+}
+
+.icon-side-bar a:hover {
+  background-color: $black;
+  transform: rotateY(25deg); 
+}
+  
+.facebook {
+  background: $medium-blue-f;
+  color: $white; 
+}
+  
+.google {
+  background: $light-red-g; 
+  color: $white; 
+}
+  
+.linkedin {
+  background: $light-blue-in;
+  color: $white; 
+}
+
+#join {
+  border: 1px solid $light-green;
+  border-radius: 5px;
+  background: transparent;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 10rem; 
+}
+  
+#join:hover {
+  background: $light-green;
+  cursor: pointer;
+  transition: 0.3s ease-in-out; 
+}
+
+#message {
+  height: 4rem;
+  margin: 25px 10rem;
+  width: 8rem; 
+}
+  
+#newsletter,
+#message,
+#courses-button:hover {
+  cursor: pointer; 
+} 
+  
+#newsletter,
+#join:hover {
+  cursor: pointer; 
+}
+
+#newsletter {
+  color: $crimson;
+  font-size: 15px;
+  margin: -10rem .8rem;
+  height: 4rem;
+  width: 10rem;
+  font-weight: 900; 
+} 

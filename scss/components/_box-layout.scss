@@ -1,0 +1,69 @@
+.wrapper {
+    background: linear-gradient(to left, $red, $medium-gold);
+    border-bottom: 2px solid $dark-gold;
+    display: grid;
+    grid-template-columns: repeat(2, 50%); 
+    height: 100vh;
+    position: static;
+    width: 100vw;
+    z-index: 2; 
+}
+
+.continer { 
+    width: 100vw;  
+}
+   
+main {
+    width: 100vw; 
+}
+
+.main-content {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100vw;
+    z-index: 1; 
+}
+ 
+  footer {
+    background-color: $gray;
+    border-top: 2px solid $dark-gold;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    height: 15rem;
+    justify-content: center;
+    position: relative;
+    width: 100vw; 
+}
+
+.footer-container {
+    text-align: center;
+    margin: 0 auto; 
+}
+
+#footer-logo {
+    margin-top: 5rem;
+}
+  
+footer p {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 800;
+    padding: .3rem 0; 
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 500px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      height: 50vh; }
+    
+      .top-nav-ul {
+      display: flex;
+      flex-direction: column; 
+    } 
+}
+
+

@@ -1,0 +1,47 @@
+.contact-section {
+    margin: 2rem 2rem;
+    text-align: center; 
+}
+  
+.contact-benefit {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: center;
+    text-align: center;
+    width: 100vw; 
+}
+  
+.contact-benefit-header {
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    height: 5rem;
+    margin: 0 auto 3rem auto;
+    width: 100vw; 
+}
+  
+.contact-benefit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: static;
+    word-break: break-all; 
+}
+
+.contact-benefit-item {
+    font-size: 14px;
+    width: 22rem;
+    word-break: break-all; 
+}
+
+.bottom-content {
+    align-items: center;
+    background: url("./img/2.jpg") no-repeat center center;
+    background-size: cover;
+    color: $white;
+    height: 30rem;
+    padding: 10rem 0;
+    text-align: center;
+    width: 100%; 
+} 

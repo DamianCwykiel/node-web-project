@@ -1,0 +1,61 @@
+nav {
+  align-items: center;
+  background: gray;
+  border-bottom: 2px solid goldenrod;
+  display: inline-grid;
+  grid-template-columns: 60% 10% 10% 15% 15%;
+  grid-gap: 1em;
+  height: 8rem;
+  justify-content: flex-end;
+  padding: 3rem 3rem;
+  text-align: center;
+  font-weight: 700;
+  width: 100vw;
+  z-index: 0; }
+
+.top-nav-ul {
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 100%);
+  list-style-type: none;
+  justify-content: left; }
+
+#logo-title > a {
+  color: gold;
+  font-size: 37px;
+  padding-left: 2rem;
+  text-decoration: hidden; }
+
+#logo-subtitle {
+  color: blue;
+  font-size: 16px;
+  font-weight: 750; }
+
+a {
+  align-content: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none; }
+
+.a-tag {
+  color: black;
+  font-size: 1rem;
+  font-weight: 700; }
+
+li.offer:hover {
+  border: 1px solid white;
+  background: #f10505;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: 0.4s ease-in-out; }
+
+h4:first-child {
+  color: black;
+  font-weight: 700; }
+
+h3 {
+  color: green;
+  font-size: 20px;
+  margin: .5rem auto; }

@@ -1,0 +1,46 @@
+#article {
+    align-items: justify;
+    color: $white;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 160%;
+    padding: 4rem 0;
+    justify-items: justify;
+    text-align: center; 
+}
+  
+  #figure {
+    padding: 1rem 0;
+    position: static;
+    text-align: center;
+    width: 100%; 
+}
+
+.img-icons-container {
+    height: 5rem;
+    text-align: center;
+    width: 100vw; 
+}
+  
+.img-icons {
+    border: none;
+    height: 2rem; 
+    position: static;
+    width: 3rem; 
+}
+  
+.img-icons:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: translateY(5px); 
+}
+
+#profile-img {
+    border: 2px solid $gray;
+    margin: 2rem 0; 
+}
+  
+#progile-img:hover {
+    transform: rotateY(160deg); 
+}
