@@ -3,7 +3,6 @@ const express = require('express');
 const hbs = require('hbs');
 const http = require('http');
 const fs = require('fs');
-
 const port = process.env.PORT || 3000;
 const app = express();
 
@@ -13,6 +12,7 @@ const publicPath = path.join(__dirname, 'public');
 const server = http.createServer(app);
 
 app.use(express.static('public'));
+
 
 //configuration for partial
 // hbs.registerPartials(__dirname + './views/partials');

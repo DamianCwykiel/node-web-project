@@ -4,9 +4,9 @@
     display: grid;
     grid-template-columns: repeat(2, 50%); 
     height: 100vh;
-    position: static;
+    position: fixed;
     width: 100vw;
-    z-index: 2; 
+    z-index: 1; 
 }
 
 .continer { 
@@ -20,7 +20,7 @@ main {
 .main-content {
     align-items: center;
     display: inline-flex;
-    flex-direction: column;
+    flex-direction: row; 
     width: 100vw;
     z-index: 1; 
 }

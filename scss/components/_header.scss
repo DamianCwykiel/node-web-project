@@ -8,17 +8,18 @@ nav {
     height: 8rem;
     justify-content: flex-end;
     padding: 3rem 3rem;
+    position: relative;
     text-align: center;
     font-weight: 700;
     width: 100vw;
-    z-index: 0; 
-} 
+    z-index: 2; 
+}
 
 .top-nav-ul {
     align-content: center;
     display: grid;
     grid-template-columns: repeat(5, 100%);
-    list-style-type: none;
+    list-style-type: none; 
     justify-content: left; 
 }
 
@@ -57,10 +58,14 @@ li.offer:hover {
     transform: scale(1.03);
     transition: 0.4s ease-in-out; 
 }
+
+p {
+    padding: 1rem 0;
+}
   
 h4:first-child {
     color: $black;
-    font-weight: 700; 
+    font-weight: 700;  
 }
 
 h3 {
@@ -68,3 +73,21 @@ h3 {
     font-size: 20px;
     margin: .5rem auto; 
 } 
+
+.loader {
+    border-top: 3px solid blue;
+  border-right: 3px solid green;
+  border-bottom: 3px solid red;
+  border-left: 3px solid pink;
+    border-radius: 50%;
+    position:relative;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

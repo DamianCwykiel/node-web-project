@@ -26,6 +26,30 @@
     width: 100vw; 
 }
 
+.img-courses {
+    background: url("img/courses-img.png") no-repeat center center;
+    background-size: cover;
+    padding: 8rem 0;
+    color: $white; 
+}
+  
+.courses-item {
+    align-items: center;
+    border: 1px solid $dark-gold;
+    height: 30rem;
+    text-align: center;
+    padding: 0 auto;
+    margin: 1.2rem 10rem;
+    width: 45%; 
+}
+  
+.courses-item:hover {
+    background: $antique-white;
+    box-shadow: 0 0 5px $dark-gold;
+    transform: scale(1.01);
+    transition: 0.4s ease-in-out; 
+}
+
 .projects-container {
     align-items: center;
     display: flex;
@@ -47,37 +71,13 @@
     position: relative; 
 }
 
-.img-courses {
-    background: url("img/courses-img.png") no-repeat center center;
-    background-size: cover;
-    padding: 8rem 0;
-    color: $white; 
-}
-  
-  .courses-item {
-    align-items: center;
-    border: 1px solid $dark-gold;
-    height: 30rem;
-    text-align: center;
-    padding: 0 auto;
-    margin: 1.2rem 10rem;
-    width: 45%; 
-}
-  
-  .courses-item:hover {
-    background: $antique-white;
-    box-shadow: 0 0 5px $dark-gold;
-    transform: scale(1.01);
-    transition: 0.4s ease-in-out; 
-}
-  
-  .projects-item {
+.projects-item {
     padding: 1.5rem 0;
     text-align: center;
     width: 30rem; 
 }
   
-  .projects-item:hover {
+.projects-item:hover {
     transform: scale(1.03);
     transition: 0.4s ease-in-out; 
 }

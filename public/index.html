@@ -7,6 +7,7 @@
     <link rel="icon" type="image/ico" href="/images/favicon.ico" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <div id="container">
@@ -53,7 +54,7 @@
               <img src="images/1-dc.jpg" id="profile-img"/>
             </div>
             <div class="img-icons-container">
-              <a href ="#courses"><img src="images/2 - down.svg" class="img-icons"></a>
+              <a href ="#courses"><img src="images/2 - down.svg" class="img-icons" id="arrow-down"></a>
             </div>
           </div>
           <div class="icon-side-bar">
@@ -195,6 +196,11 @@
             <p>Send me a message.</p>
             <button class ="button" id="message"><a class ="a-tag" href="https://gmail.com" target="_blank">EMAIL</a></button>
           </div>
+          <div class ="bottom-content-map">
+            <div class="loader"></div>
+            <div class="loader"></div>
+            <div id="map"></div>
+          </div>
       </main>
       <footer>
         <div class="footer-container">
@@ -210,6 +216,20 @@
         </div>
       </footer>
     </div>
-    <script src="/js/app.js"></script>
-  </body>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtaWFuLTg4IiwiYSI6ImNqdHNpN2Z3YzExbDIzem11YTN0cjBheDYifQ.NR-YGuu-7d1mteUPwBKVdQ';
+      const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/damian-88/cjtuiee5702bu1fnzty3sw37h',
+      center: [22.02454, 50.114853],
+      zoom: 10.9
+      });
+      </script>
+    <script src="js/libs/modernizr.js"></script>
+    <script src="js/libs/velocity.min.js"></script>
+    <script src="js/libs/velocity.ui.min.js"></script>
+    <script src="js/app.js"></script>
+    </body>
 </html>
