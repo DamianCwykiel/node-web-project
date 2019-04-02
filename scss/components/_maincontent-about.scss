@@ -10,7 +10,7 @@
     text-align: center; 
 }
   
-  #figure {
+#figure {
     padding: 1rem 0;
     position: static;
     text-align: center;
@@ -28,19 +28,14 @@
     height: 2rem; 
     position: static;
     width: 3rem; 
-}
-  
-.img-icons:hover {
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    transform: translateY(5px); 
+    &:hover {
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        transform: translateY(5px); 
+    }
 }
 
 #profile-img {
     border: 2px solid $gray;
     margin: 2rem 0; 
-}
-  
-#progile-img:hover {
-    transform: rotateY(160deg); 
 }

@@ -9,12 +9,9 @@
     z-index: 1; 
 }
 
-.continer { 
+.continer, main { 
     width: 100vw;  
-}
-   
-main {
-    width: 100vw; 
+      background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 .main-content {
@@ -25,7 +22,7 @@ main {
     z-index: 1; 
 }
  
-  footer {
+footer {
     background-color: $gray;
     border-top: 2px solid $dark-gold;
     color: $white;
@@ -35,6 +32,12 @@ main {
     justify-content: center;
     position: relative;
     width: 100vw; 
+    p {
+        font-size: 11px;
+        font-style: italic;
+        font-weight: 800;
+        padding: .3rem 0; 
+    }
 }
 
 .footer-container {
@@ -46,12 +49,6 @@ main {
     margin-top: 5rem;
 }
   
-footer p {
-    font-size: 11px;
-    font-style: italic;
-    font-weight: 800;
-    padding: .3rem 0; 
-}
 
 //MEDIA QUERIES
 @media screen and (max-width: 500px) {

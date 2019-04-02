@@ -18,34 +18,41 @@ $(function($){
 	});
 });
 
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// Next/previous
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
 
-// Thumbnail image controls
-function currentSlide(n) {
+// // arrow-button
+ function currentSlide(n) {
   showSlides(slideIndex = n);
-}
+ }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("courses-item");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
+	function showSlides(n) {
+	let i;
+
+  let slides = document.getElementsByClassName("courses-item");
+  let dots = document.getElementsByClassName("dot");
+	
+	if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
+	
+	for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none"; 
+		}
+
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
+	dots[slideIndex-1].className += " active";
 }
+
+
+
 
       (function() {
 		'user strict';
@@ -81,12 +88,11 @@ function showSlides(n) {
 				blurScroll = currentScroll / 2;
 
 			hello.style.transform = 'translate3d(0, ' + helloScroll + 'px, 0)';
- blur.style.opacity = (blurScroll / windowHeight - 5).toFixed(5);
-			if(blur.style.opacity >= 1) {
-				blur.style.opacity = 1;
+ 			blur.style.display = (blurScroll / windowHeight - 5).toFixed(5);
+			if(blur.style.display >= 1) {
+				blur.style.display = 1;
 			}
 		}
-
 		init();
 	})();
 

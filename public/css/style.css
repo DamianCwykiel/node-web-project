@@ -7,7 +7,7 @@ html {
   overflow-x: hidden; }
 
 body {
-  background: #eeeed5;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   font-family: helvetica, arial;
   overflow-x: hidden;
   position: absolute; }
@@ -109,10 +109,7 @@ h3 {
   width: 100vw;
   z-index: 1; }
 
-.continer {
-  width: 100vw; }
-
-main {
+.continer, main {
   width: 100vw; }
 
 .main-content {
@@ -132,6 +129,11 @@ footer {
   justify-content: center;
   position: relative;
   width: 100vw; }
+  footer p {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 800;
+    padding: .3rem 0; }
 
 .footer-container {
   text-align: center;
@@ -139,12 +141,6 @@ footer {
 
 #footer-logo {
   margin-top: 5rem; }
-
-footer p {
-  font-size: 11px;
-  font-style: italic;
-  font-weight: 800;
-  padding: .3rem 0; }
 
 @media screen and (max-width: 500px) {
   nav {
@@ -169,11 +165,10 @@ footer p {
   font-weight: 600;
   position: static;
   margin: 25px 10rem; }
-
-#courses-button:hover {
-  background: rgba(255, 0, 0, 0.856);
-  cursor: pointer;
-  transition: 0.5s linear; }
+  #courses-button:hover {
+    background: rgba(255, 0, 0, 0.856);
+    cursor: pointer;
+    transition: 0.5s linear; }
 
 .contact-side-icon {
   width: 60px;
@@ -185,10 +180,9 @@ footer p {
   bottom: 70px;
   z-index: 1;
   opacity: 0.5; }
-
-.contact-side-icon:hover {
-  opacity: 1;
-  transition: 0.4s ease-in-out; }
+  .contact-side-icon:hover {
+    opacity: 1;
+    transition: 0.4s ease-in-out; }
 
 .content {
   margin-left: 75px;
@@ -197,21 +191,17 @@ footer p {
 .icon-side-bar {
   position: fixed;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
-
-.icon-side-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: #fff;
-  font-size: 20px; }
-
-.icon-side-bar a:hover {
-  background-color: #000;
-  transform: rotateY(25deg); }
+  .icon-side-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 20px; }
+    .icon-side-bar a:hover {
+      background-color: #000;
+      transform: rotateY(25deg); }
 
 .facebook {
   background: #3B5998;
@@ -233,25 +223,17 @@ footer p {
   font-size: 18px;
   font-weight: 600;
   margin: 25px 10rem; }
-
-#join:hover {
-  background: #057c05;
-  cursor: pointer;
-  transition: 0.3s ease-in-out; }
+  #join:hover {
+    background: #057c05;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; }
 
 #message {
   height: 4rem;
   margin: 25px 10rem;
   width: 8rem; }
-
-#newsletter,
-#message,
-#courses-button:hover {
-  cursor: pointer; }
-
-#newsletter,
-#join:hover {
-  cursor: pointer; }
+  #message:hover {
+    cursor: pointer; }
 
 #newsletter {
   color: crimson;
@@ -260,6 +242,8 @@ footer p {
   height: 4rem;
   width: 10rem;
   font-weight: 900; }
+  #newsletter:hover {
+    cursor: pointer; }
 
 #article {
   align-items: justify;
@@ -288,18 +272,14 @@ footer p {
   height: 2rem;
   position: static;
   width: 3rem; }
-
-.img-icons:hover {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  transform: translateY(5px); }
+  .img-icons:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: translateY(5px); }
 
 #profile-img {
   border: 2px solid gray;
   margin: 2rem 0; }
-
-#progile-img:hover {
-  transform: rotateY(160deg); }
 
 .contact-section {
   margin: 2rem 2rem;
@@ -424,37 +404,33 @@ footer p {
   padding: 1.5rem 0;
   text-align: center;
   width: 30rem; }
-
-.projects-item:hover {
-  transform: scale(1.03);
-  transition: 0.4s ease-in-out; }
+  .projects-item:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease-in-out; }
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  width: 5rem;
-  height: 5rem;
-  margin-top: -22px;
-  padding: 16px;
+  border-radius: 0 3px 3px 0;
   color: #057c05;
+  cursor: pointer;
   font-weight: bold;
   font-size: 18px;
+  height: 4rem;
+  margin-top: -22px;
+  padding: 16px;
+  position: relative;
+  top: 50%;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none; }
+  user-select: none;
+  width: 5rem; }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px; }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #fff; }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
