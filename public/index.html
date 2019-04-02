@@ -62,65 +62,79 @@
             <a href="https://aboutme.google.com/" class="google" target="_blank"><i class="fa fa-google"></i></a>
             <a href="https://www.linkedin.com/in/damian-cwykiel-8a9580172/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
           </div>
-          <div class="main-content courses-container" id="courses">
+          <div class="main-content courses-container" id="courses"> 
             <div class ="courses-items-title">
               <h1>Dev Training Courses with English Lessons</h1>
             </div>
-            <div class ="courses-item">
-                <div class="img-courses">
+            <div class="arrow-container">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class ="courses-item"> 
+                <div class="img-courses-first">
                   <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
                 </div>
                 <h3>FrontEnd Development for beginners -a1</h3>
-                  <p>Level 1. Front-end from the srcatch.</p>
+                  <p><span>Level 1.</span> Front-end from the srcatch.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-second">
                   <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>FrontEnd advanced -a2</h3>
-                <p>Level 2. The Course dedicated for more advanced students.</p>
+                <p><span>Level 2.</span> The Course dedicated for more advanced students.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-third">
                 <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>Summary and Creation.</h3>
-                <p>Level 3. Gathering learned knowleage & create real-world projects.</p>
+                <p><span>Level 3.</span> Gathering learned knowleage & create real-world projects.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-first">
                 <a href ="#"><button class="button" id="join">Click 4 More...</button></a>
               </div>
-              <h3>FrontEnd with frameworsks -b1</h3>
-                <p>Level 4. ES6/7, React, Webpack, Babel.</p>
+              <h3>FrontEnd with frameworks -b1</h3>
+                <p><span>Level 4.</span> ES6/7, React, Webpack, Babel.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-second">
                 <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>FrontEnd frameworks-b2, BackEnd -c1</h3>
-                <p>Level 5. JS, React, Redux, Hooks, Firebase, PHP, Python, Node.js, tests: Mocha, Jest.</p>
+                <p><span>Level 5.</span> JS, React, Redux, Hooks, Firebase, PHP, Python, Node.js, tests: Mocha, Jest.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-third">
                 <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>BackEnd advanced -c2</h3>
-                <p>Level 6. Node.js, MongoDB, PHP, C#, tests: Mocha, Jest.</p>
+                <p><span>Level 6.</span> Node.js, MongoDB, PHP, C#, tests: Mocha, Jest.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-first">
                 <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>Final project & web deployment.</h3>
-                <p>Level 7. Create a few final portfolio projects.</p>
+                <p><span>Level 7.</span> Create a few final portfolio projects.</p>
             </div>
             <div class ="courses-item">
-              <div class="img-courses">
+              <div class="img-courses-second">
                 <button class="button" id="join"><a href ="#">Click 4 More...</a></button>
               </div>
               <h3>Additional technologies.</h3>
-                <p>Level 8. Learning basics of: Java, C#, .NET.</p>
+                <p><span>Level 8.</span> Learning basics of: Java, C#, .NET.</p>
+            </div>
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span>
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
             </div>
           </div>
           <div class ="projects-container">
@@ -197,8 +211,6 @@
             <button class ="button" id="message"><a class ="a-tag" href="https://gmail.com" target="_blank">EMAIL</a></button>
           </div>
           <div class ="bottom-content-map">
-            <div class="loader"></div>
-            <div class="loader"></div>
             <div id="map"></div>
           </div>
       </main>
@@ -217,19 +229,6 @@
       </footer>
     </div>
     <script src="js/libs/jquery-3.3.1.min.js"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtaWFuLTg4IiwiYSI6ImNqdHNpN2Z3YzExbDIzem11YTN0cjBheDYifQ.NR-YGuu-7d1mteUPwBKVdQ';
-      const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/damian-88/cjtuiee5702bu1fnzty3sw37h',
-      center: [22.02454, 50.114853],
-      zoom: 10.9
-      });
-      </script>
-    <script src="js/libs/modernizr.js"></script>
-    <script src="js/libs/velocity.min.js"></script>
-    <script src="js/libs/velocity.ui.min.js"></script>
     <script src="js/app.js"></script>
     </body>
 </html>

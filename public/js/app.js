@@ -13,12 +13,39 @@ $(function($){
 	});
 	$('#arrow-down, #courses-button').click(function(){
 		$('html').animate({ 
-				scrollTop: $('.courses-container').offset().top 
-		}, 1000);	
+				scrollTop: $('.arrow-container').offset().top
+		}, 2000);	
 	});
 });
 
+let slideIndex = 1;
+showSlides(slideIndex);
 
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("courses-item");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
 
       (function() {
 		'user strict';
@@ -63,13 +90,4 @@ $(function($){
 		init();
 	})();
 
-	var myVar;
 
-	function myFunction() {
-		myVar = setTimeout(showPage, 3000);
-	}
-	
-	function showPage() {
-		document.getElementById("loader").style.display = "none";
-		document.getElementById("myDiv").style.display = "block";
-	}

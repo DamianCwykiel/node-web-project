@@ -99,24 +99,6 @@ h3 {
   font-size: 20px;
   margin: .5rem auto; }
 
-.loader {
-  border-top: 3px solid blue;
-  border-right: 3px solid green;
-  border-bottom: 3px solid red;
-  border-left: 3px solid pink;
-  border-radius: 50%;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  animation: spin 2s linear infinite;
-  z-index: -1; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-
 .wrapper {
   background: linear-gradient(to left, red, gold);
   border-bottom: 2px solid goldenrod;
@@ -136,7 +118,7 @@ main {
 .main-content {
   align-items: center;
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100vw;
   z-index: 1; }
 
@@ -361,37 +343,6 @@ footer p {
   text-align: center;
   width: 100%; }
 
-.bottom-content-map {
-  align-items: center;
-  background-size: cover;
-  color: #fff;
-  height: 30rem;
-  padding: 0 0;
-  text-align: center;
-  align-content: center;
-  justify-items: center;
-  text-align: center; }
-
-#map {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  top: 0;
-  right: 20;
-  z-index: 0; }
-
-.canvas {
-  text-align: center;
-  width: 100%; }
-
-.mapboxgl-map {
-  background-position: cover;
-  position: relative; }
-
-.mapboxgl-canvas {
-  background-position: cover;
-  position: relative; }
-
 #courses {
   background-color: #eeeed5; }
 
@@ -404,7 +355,8 @@ footer p {
   list-style-type: none; }
 
 .courses-container {
-  align-items: center; }
+  align-items: center;
+  width: 100vw; }
 
 .courses-items-title, .projects-items-title {
   background: #eeeed5;
@@ -412,14 +364,22 @@ footer p {
   display: inline-grid;
   grid-column: 1/3;
   justify-content: center;
-  padding: 8rem 5rem;
+  padding: 5rem 5rem;
   width: 100vw; }
 
-.img-courses {
-  background: url("img/courses-img.png") no-repeat center center;
+.img-courses-first, .img-courses-second, .img-courses-third {
+  background: url("img/courses-img-1.png") no-repeat center center;
   background-size: cover;
   padding: 8rem 0;
   color: #fff; }
+
+.img-courses-second {
+  background: url("img/courses-img-2.png") no-repeat center center;
+  background-size: cover; }
+
+.img-courses-third {
+  background: url("img/courses-img-3.png") no-repeat center center;
+  background-size: cover; }
 
 .courses-item {
   align-items: center;
@@ -428,9 +388,15 @@ footer p {
   text-align: center;
   padding: 0 auto;
   margin: 1.2rem 10rem;
-  width: 45%; }
+  width: 60%; }
+  .courses-item span {
+    color: rgba(255, 0, 0, 0.856);
+    font-size: 1.2rem;
+    font-weight: 800; }
 
-.courses-item:hover {
+.courses-item-first:hover,
+.courses-item-second:hover,
+.courses-item-third:hover {
   background: #eeeed5;
   box-shadow: 0 0 5px goldenrod;
   transform: scale(1.01);
@@ -462,3 +428,56 @@ footer p {
 .projects-item:hover {
   transform: scale(1.03);
   transition: 0.4s ease-in-out; }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin-top: -22px;
+  padding: 16px;
+  color: #057c05;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #fff; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+  background-color: #717171; }
+
+.dot-container {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100vw; }
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  width: 60vw; }
