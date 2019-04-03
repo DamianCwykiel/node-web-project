@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no">
     <title>Dev Courses | Damian Cwykiel</title>
     <link rel="icon" type="image/ico" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div id="container">
@@ -50,8 +51,9 @@
                     </ul>
                   <button class ="button" id="courses-button"><a href="#courses">View Courses</a></button>
             </div>
-            <div id="figure">
-              <img src="images/1-dc.jpg" id="profile-img"/>
+            <div id="figure" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
+              <img src="images/1-dc.jpg" class="profile-img" />
             </div>
             <div class="img-icons-container">
               <a href ="#courses"><img src="images/2 - down.svg" class="img-icons" id="arrow-down"></a>
@@ -142,41 +144,43 @@
               <h1>Projects we'll create during our classes</h1>
             </div>
             <div class="projects-container-items" id="projects">
-              <div class="projects-item">
+              <div class="projects-item" data-aos="fade-right">
                 <h1>Portfolio</h1>
                 <p>JavaScript, jQuery, PHP, Bootstrap</p>
                 <img src='images/1-portfolio-2.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="fade-left">
                 <h1>The Book</h1>
                 <p>JavaScript, jQuery, PHP, MySQL, Bootstrap</p>
                 <img src='images/1-notes.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="flip-left">
                 <h1>Weather App</h1>
                 <p>JavaScript, jQuery, PHP, MySQL, Bootstrap, weather API</p>
                 <img src='images/1-weather-app.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="flip-right">
                 <h1>Shopping App</h1>
                 <p>React, SASS, Webpack, Babel</p>
                 <img src='images/1-shopping-app.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="zoom-in-right">
                 <h1>Invoices Manager</h1>
                 <p>React, Redux, SASS, Firebase, Webpack, Babel, AirBnB, Jest</p>
                 <img src='images/1-invoice-manager.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="zoom-in-left">
                 <h1>Live Chat Room</h1>
                 <p>Node.js, Socket.io, Moustache, Mocha</p>
                 <img src='images/1-live-chat-room.png'>
               </div>
-              <div class="projects-item">
+              <div class="projects-item" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000">> 
                   <h1>Code Constructor</h1>
                   <p>JavaScript, jQuery</p>
                   <img src='images/1-code-constructor.png'>
-                </div>
+              </div>
             </div>
           </div>
           <div class="contact-benefit" id="courses">
@@ -230,5 +234,15 @@
     </div>
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>   
+  <script>
+    AOS.init({
+      duration: 2000,
+      delay: 300
+    });
+  </script>
     </body>
 </html>
+
+<!-- https://michalsnik.github.io/aos/ -->
+<!-- https://github.com/michalsnik/aos -->

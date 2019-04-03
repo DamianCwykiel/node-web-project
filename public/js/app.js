@@ -8,8 +8,8 @@ $(function($){
             else $('.icon-side-bar').fadeOut("slow");
 		});
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > 150) $('#article, #figure, #arrow-down').fadeOut("slow");
-					else $('#article, #figure, #arrow-down').fadeIn("slow");
+			if ($(this).scrollTop() > 150) $('#article, #arrow-down').fadeOut("slow");
+					else $('#article, #arrow-down').fadeIn("slow");
 	});
 	$('#arrow-down, #courses-button').click(function(){
 		$('html').animate({ 
@@ -57,7 +57,7 @@ showSlides(slideIndex);
       (function() {
 		'user strict';
 		var hello = document.querySelector('.wrapper'),
-			blur = document.querySelector('.img'),
+			blur = document.querySelector('.profile-img'),
 			windowHeight = window.innerHeight,
 			isScroll = false;
 
@@ -87,10 +87,10 @@ showSlides(slideIndex);
 			var helloScroll = currentScroll * 4,
 				blurScroll = currentScroll / 2;
 
-			hello.style.transform = 'translate3d(0, ' + helloScroll + 'px, 0)';
- 			blur.style.display = (blurScroll / windowHeight - 5).toFixed(5);
-			if(blur.style.display >= 1) {
-				blur.style.display = 1;
+			hello.transform = 'translate3d(0, ' + helloScroll + 'px, 0)';
+ 			blur.style.opacity = (blurScroll / windowHeight - 5).toFixed(5);
+			if(blur.style.opacity >=1) {
+				blur.style.opacity = 1;
 			}
 		}
 		init();
