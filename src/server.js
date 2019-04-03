@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -19,15 +19,22 @@ app.set('views', viewsPath)
 app.use(express.static(publicDirectoryPath))
 
 //homePage
+// app.get('', (req, res) => {
+//   app.render('index')
+// })
+//index
 app.get('', (req, res) => {
-  app.render('index')
+  res.render('index', {
+    footer: 'D&D By Damian Cwykiel &copy 2019.',
+    tag: "You're look' for WebDeveloper?"
+  })
 })
 
 //blog
 app.get('/blog', (req, res) => {
-  app.render('blog', {
+  res.render('blog', {
     footer: 'D&D By Damian Cwykiel &copy 2019.',
-    tag: `You're look' for WebDeveloper?`
+    tag: "You're look' for WebDeveloper?"
   })
 })
 
