@@ -4,16 +4,16 @@ console.log('js is wire up!')
 $(function($){
     //show up when scroll is using//
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 350) $('.icon-side-bar').fadeIn("slow");
-            else $('.icon-side-bar').fadeOut("slow");
+      if ($(this).scrollTop() > 350) $('.icon-side-bar').fadeIn("slow");
+      	else $('.icon-side-bar').fadeOut("slow");
 		});
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > 550) $('#article, #arrow-down, .profile-img').fadeOut("slow");
-					else $('#article, #arrow-down, .profile-img').fadeIn("slow");
+			if ($(this).scrollTop() > 450) $('#article, #arrow-down, .profile-img').fadeOut("slow");
+				else $('#article, #arrow-down, .profile-img').fadeIn("slow");
 	});
 	$('#arrow-down, #courses-button').click(function(){
 		$('html').animate({ 
-				scrollTop: $('.arrow-container').offset().top
+			scrollTop: $('.arrow-container').offset().top
 		}, 2000);	
 	});
 });
@@ -26,7 +26,7 @@ showSlides(slideIndex);
    showSlides(slideIndex += n);
  }
 
-// // arrow-button
+// arrow-button
  function currentSlide(n) {
   showSlides(slideIndex = n);
  }
@@ -51,10 +51,7 @@ showSlides(slideIndex);
 	dots[slideIndex-1].className += " active";
 }
 
-
-
-
-  //     (function() {
+  //  (function() {
 	// 	'user strict';
 	// 	var hello = document.querySelector('.wrapper'),
 	// 		blur = document.querySelector('.profile-img'),

@@ -86,19 +86,15 @@
 }
     
 #project {
-    height: 20rem;
+    height: 20rem; 
     width: 20rem;
-    position: relative; 
+    position: relative;
 }
 
 .projects-item {
     padding: 1.5rem 0;
     text-align: center;
     width: 30rem; 
-    &:hover {
-        transform: scale(1.03);
-        transition: 0.4s ease-in-out; 
-    }
 }
 
 /* Next & previous buttons */
