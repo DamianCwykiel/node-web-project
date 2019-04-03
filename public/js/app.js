@@ -8,8 +8,8 @@ $(function($){
             else $('.icon-side-bar').fadeOut("slow");
 		});
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > 150) $('#article, #arrow-down').fadeOut("slow");
-					else $('#article, #arrow-down').fadeIn("slow");
+			if ($(this).scrollTop() > 550) $('#article, #arrow-down, .profile-img').fadeOut("slow");
+					else $('#article, #arrow-down, .profile-img').fadeIn("slow");
 	});
 	$('#arrow-down, #courses-button').click(function(){
 		$('html').animate({ 
@@ -18,7 +18,7 @@ $(function($){
 	});
 });
 
-let slideIndex = 0;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous
@@ -54,46 +54,46 @@ showSlides(slideIndex);
 
 
 
-      (function() {
-		'user strict';
-		var hello = document.querySelector('.wrapper'),
-			blur = document.querySelector('.profile-img'),
-			windowHeight = window.innerHeight,
-			isScroll = false;
+  //     (function() {
+	// 	'user strict';
+	// 	var hello = document.querySelector('.wrapper'),
+	// 		blur = document.querySelector('.profile-img'),
+	// 		windowHeight = window.innerHeight,
+	// 		isScroll = false;
 
-		var latestScroll = 0;
-		var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+	// 	var latestScroll = 0;
+	// 	var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+  //   window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-  	window.requestAnimationFrame = requestAnimationFrame;
+  // 	window.requestAnimationFrame = requestAnimationFrame;
 
-  		var init = function() {
-  			window.addEventListener('scroll', function(){
-				latestScroll = window.scrollY;
-				checkScroll();
-			}, false);
-  		}
+  // 		var init = function() {
+  // 			window.addEventListener('scroll', function(){
+	// 			latestScroll = window.scrollY;
+	// 			checkScroll();
+	// 		}, false);
+  // 		}
 
-		var checkScroll = function() {
-			if(!isScroll) {
-				window.requestAnimationFrame(update);
-			}
-			isScroll = true;
-		}
+	// 	var checkScroll = function() {
+	// 		if(!isScroll) {
+	// 			window.requestAnimationFrame(update);
+	// 		}
+	// 		isScroll = true;
+	// 	}
 
-		var update = function() {
-			currentScroll = latestScroll;
-			isScroll = false;
-			var helloScroll = currentScroll * 4,
-				blurScroll = currentScroll / 2;
+	// 	var update = function() {
+	// 		currentScroll = latestScroll;
+	// 		isScroll = false;
+	// 		var helloScroll = currentScroll * 2,
+	// 			blurScroll = currentScroll / 2;
 
-			hello.transform = 'translate3d(0, ' + helloScroll + 'px, 0)';
- 			blur.style.opacity = (blurScroll / windowHeight - 5).toFixed(5);
-			if(blur.style.opacity >=1) {
-				blur.style.opacity = 1;
-			}
-		}
-		init();
-	})();
+	// 		hello.transform = 'translate3d(0, ' + helloScroll + 'px, 0)';
+ 	// 		blur.style.opacity = (blurScroll / windowHeight - 5).toFixed(2);
+	// 		if(blur.style.opacity >=1) {
+	// 			blur.style.opacity = 1;
+	// 		}
+	// 	}
+	// 	init();
+	// })();
 
 
