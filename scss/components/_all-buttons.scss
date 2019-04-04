@@ -45,6 +45,7 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%); 
+  z-index: 2;
   a {
     display: block;
     text-align: center;
@@ -54,7 +55,7 @@
     font-size: 20px; 
     &:hover {
       background-color: $black;
-      transform: rotateY(25deg); 
+      transform: rotateY(25deg);
     }
   }
 }

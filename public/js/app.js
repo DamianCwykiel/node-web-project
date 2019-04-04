@@ -8,7 +8,7 @@ $(function($){
       	else $('.icon-side-bar').fadeOut("slow");
 		});
 		$(window).scroll(function() {
-			if ($(this).scrollTop() > 450) $('#article, #arrow-down, .profile-img').fadeOut("slow");
+			if ($(this).scrollTop() > 150) $('#article, #arrow-down, .profile-img').fadeOut("slow");
 				else $('#article, #arrow-down, .profile-img').fadeIn("slow");
 	});
 	$('#arrow-down, #courses-button').click(function(){
