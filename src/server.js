@@ -1,9 +1,9 @@
 const path = require('path');
 const express = require('express');
-const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 5000;
 
 // console.log(__dirname)
 // console.log(__filename)
@@ -21,10 +21,6 @@ hbs.registerPartials(partialsPath)
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
-//homePage
-// app.get('', (req, res) => {
-//   app.render('index')
-// })
 //index
 app.get('', (req, res) => {
   res.render('index', {
@@ -42,6 +38,28 @@ app.get('/blog', (req, res) => {
     offer: 'Dev Classes for Kids',
     title: 'D&D By Damian Cwykiel &copy 2019.',
     subtitle: "You're look' for WebDeveloper?"
+  })
+})
+
+//error page
+app.get('/blog/*', (req, res) => {
+  res.render('404-page', {
+    logo: 'Damian Cwykiel',
+    offer: 'Dev Classes for Kids',
+    title: 'D&D By Damian Cwykiel &copy 2019.',
+    subtitle: "You're look' for WebDeveloper?",
+    errorMessage: 'Page not found. Sorry O_O'
+  })
+})
+
+//error page
+app.get('*', (req, res) => {
+  res.render('404-page', {
+    logo: 'Damian Cwykiel',
+    offer: 'Dev Classes for Kids',
+    title: 'D&D By Damian Cwykiel &copy 2019.',
+    subtitle: "You're look' for WebDeveloper?",
+    errorMessage: 'Page not found. Sorry O_O'
   })
 })
 

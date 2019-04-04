@@ -11,13 +11,14 @@
 
 .continer, main { 
     width: 100vw;  
-      background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 .main-content {
     align-items: center;
     display: inline-flex;
     flex-direction: column; 
+    flex-grow: 5;
     width: 100vw;
     z-index: 1; 
 }
@@ -31,7 +32,7 @@ footer {
     height: 15rem;
     justify-content: center;
     position: relative;
-    width: 100vw; 
+    width: 100vw;  
     p {
         font-size: 11px;
         font-style: italic;

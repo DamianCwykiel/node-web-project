@@ -1,4 +1,5 @@
 console.log('js is wire up!')
+const fs = require('fs');
 
 // Fading
 $(function($){

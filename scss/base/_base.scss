@@ -1,4 +1,4 @@
-@import "./settings";
+@import './settings';
 
 * {
     box-sizing: border-box;
@@ -12,9 +12,9 @@ html {
   
 body {
     background: $antique-white;
-    font-family: helvetica, arial;
+    font-family: helvetica, arial; 
     overflow-x: hidden; 
-    position: absolute;   
+    position: absolute; 
 }  
     
 ::-webkit-scrollbar {

@@ -68,6 +68,12 @@ h4:first-child {
     font-weight: 700;  
 }
 
+h2 {
+    @extend #logo-subtitle;
+    color: $dark-red; 
+    font-size: 1.8rem;
+}
+
 h3 {
     color: $medium-green;
     font-size: 20px;
