@@ -58,6 +58,9 @@ li.offer:hover {
     transform: scale(1.03);
     transition: 0.4s ease-in-out; 
 }
+li > a:hover {
+    opacity: .8; 
+}
 
 p {
     padding: 1rem 0;

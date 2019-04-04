@@ -19,21 +19,32 @@
 
 .img-icons-container {
     height: 5rem;
+    padding: 2rem 0;
     text-align: center;
     width: 100vw; 
+}
+
+.img-arrow-container {
+    @extend .img-icons-container;
+    padding: 1px 0;
 }
 
 .img-icons {
     border: none;
     height: 2rem; 
     position: static;
-    width: 3rem; 
+    width: 3rem;  
     &:hover {
         cursor: pointer;
         transition: 0.5s ease-in-out;
         transform: translateY(5px); 
     }
 }
+
+#arrow-down {
+    height:2rem;  
+    width: 2rem;
+} 
 
 .profile-img {
     border: 2px solid $gray;

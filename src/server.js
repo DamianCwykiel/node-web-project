@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -21,12 +22,32 @@ hbs.registerPartials(partialsPath)
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
+//Express Middleware
+app.use((req, res, next) => {
+  const now = new Date().toString();
+  const log = `${now}: ${req.method} ${req.url}`;
+
+  // console.log(log);
+  // fs.appendFile('server.log', log + '\n');
+  fs.appendFile('server.log', log + '\n', (err) => {
+    if(err) {
+      console.log('unable to append to server.log')
+    }
+  });
+  next();
+});
+
+//helper
+hbs.registerHelper('getCurrentYear', () => {
+  return new Date().getFullYear()
+})
+
 //index
 app.get('', (req, res) => {
   res.render('index', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel &copy 2019.',
+    title: 'D&D By Damian Cwykiel ©',
     subtitle: "You're look' for WebDeveloper?"
   })
 })
@@ -36,17 +57,17 @@ app.get('/blog', (req, res) => {
   res.render('blog', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel &copy 2019.',
+    title: 'D&D By Damian Cwykiel ©',
     subtitle: "You're look' for WebDeveloper?"
   })
 })
 
 //error page
 app.get('/blog/*', (req, res) => {
-  res.render('404-page', {
+  res.send('404-page', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel &copy 2019.',
+    title: 'D&D By Damian Cwykiel ©.',
     subtitle: "You're look' for WebDeveloper?",
     errorMessage: 'Page not found. Sorry O_O'
   })
@@ -57,7 +78,7 @@ app.get('*', (req, res) => {
   res.render('404-page', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel &copy 2019.',
+    title: 'D&D By Damian Cwykiel.',
     subtitle: "You're look' for WebDeveloper?",
     errorMessage: 'Page not found. Sorry O_O'
   })

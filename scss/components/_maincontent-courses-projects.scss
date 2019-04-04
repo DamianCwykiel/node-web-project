@@ -128,13 +128,13 @@
     height: 15px;
     width: 15px;
     margin: 0 4px;
-    background-color: $dot-gray;
+    background-color: $yellow-green;
     border-radius: 50%;
     transition: background-color 0.6s ease;
 }
     
 .active, .dot:hover {
-    background-color: $dot-gray-active;
+    background-color: $light-green;
 }
   
 .dot-container {
