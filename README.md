@@ -1,4 +1,4 @@
-# node-webPage
+# node-web-project
 --------------------------
 * it's a webPage created in BackEnd technology - Node.js. 
 * the project lives at heroku using Express.js.
@@ -14,8 +14,5 @@ https://node-web-project.herokuapp.com/
 * node src/server.js
 * check your browser - localhost: 5000
 *ex path: \node-webPage\node src/server.js
-=======
-# node-web-project
-* this is a new project file/...
-* the project's under construction/..
+
 
