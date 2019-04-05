@@ -20,6 +20,14 @@
   }
 }
 
+#blog-button {
+  @extend #courses-button;
+  background: $crimson;
+  font-size: 14px;
+  height: 4rem;
+  width: 10rem; 
+}
+
 .contact-side-icon {
   width: 60px;
   height: 60px;

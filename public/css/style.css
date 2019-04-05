@@ -165,7 +165,7 @@ footer {
   width: 10rem;
   font-weight: 900; }
 
-#courses-button {
+#courses-button, #blog-button {
   border: 1px solid rgba(255, 0, 0, 0.856);
   border-radius: 5px;
   background: transparent;
@@ -174,10 +174,16 @@ footer {
   font-weight: 600;
   position: static;
   margin: 25px 10rem; }
-  #courses-button:hover {
+  #courses-button:hover, #blog-button:hover {
     background: rgba(255, 0, 0, 0.856);
     cursor: pointer;
     transition: 0.5s linear; }
+
+#blog-button {
+  background: crimson;
+  font-size: 14px;
+  height: 4rem;
+  width: 10rem; }
 
 .contact-side-icon {
   width: 60px;
@@ -356,7 +362,7 @@ footer {
   align-items: center;
   width: 100vw; }
 
-.courses-items-title, .projects-items-title {
+.courses-items-title, #blog-title, .projects-items-title {
   background: #eeeed5;
   color: yellowgreen;
   display: inline-grid;
@@ -364,6 +370,17 @@ footer {
   justify-content: center;
   padding: 5rem 5rem;
   width: 100vw; }
+
+#blog-title p {
+  text-align: center; }
+
+#error {
+  border: none;
+  padding: 5rem 0; }
+  #error h1 {
+    color: #555; }
+  #error p {
+    color: #717171; }
 
 .img-courses-first, .img-courses-second, .img-courses-third {
   background: url("img/courses-img-1.png") no-repeat center center;
@@ -379,7 +396,7 @@ footer {
   background: url("img/courses-img-3.png") no-repeat center center;
   background-size: cover; }
 
-.courses-item {
+.courses-item, #blog {
   align-items: center;
   border: 1px solid goldenrod;
   height: 30rem;
@@ -387,7 +404,7 @@ footer {
   padding: 0 auto;
   margin: 1.2rem 10rem;
   width: 60%; }
-  .courses-item span {
+  .courses-item span, #blog span {
     color: rgba(255, 0, 0, 0.856);
     font-size: 1.2rem;
     font-weight: 800; }
@@ -399,6 +416,26 @@ footer {
   box-shadow: 0 0 5px goldenrod;
   transform: scale(1.01);
   transition: 0.4s ease-in-out; }
+
+#blog {
+  background: #eeeed5;
+  border: none;
+  border-left: 6px solid #007bb5;
+  height: 34rem;
+  margin: 2rem auto;
+  padding: 2rem 4rem;
+  text-align: left;
+  width: 55vw; }
+  #blog h1 {
+    color: #555;
+    font-size: 26px;
+    padding: 1rem 0; }
+  #blog h3 {
+    color: #555;
+    font-size: 14px; }
+  #blog p {
+    color: #555;
+    font-size: 20px; }
 
 .projects-container {
   align-items: center;

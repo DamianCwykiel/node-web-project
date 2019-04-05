@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no">
-    <title>Dev Courses | Damian Cwykiel</title>
+    <title>404: Not Found | Damian Cwykiel</title>
     <link rel="icon" type="image/ico" href="/images/favicon.ico" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     {{> header}}
-    <div class="main-content">
-        <h2>{{errorMessage}}</h2>
+    <div class="main-content courses-container">
+      <div class="courses-item" id="error">
+        <h1>{{errorMessage}}</h1>
+        <p>{{errorMessageSubtitle}}</p>
+      </div>
     </div> 
       {{> footer}}
   </body>

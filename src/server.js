@@ -64,12 +64,13 @@ app.get('/blog', (req, res) => {
 
 //error page
 app.get('/blog/*', (req, res) => {
-  res.send('404-page', {
+  res.render('404-page', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel ©.',
+    title: 'D&D By Damian Cwykiel ©',
     subtitle: "You're look' for WebDeveloper?",
-    errorMessage: 'Page not found. Sorry O_O'
+    errorMessage: 'Page not found. Sorry O_O',
+    errorMessageSubtitle: `There's no page here.`
   })
 })
 
@@ -78,9 +79,10 @@ app.get('*', (req, res) => {
   res.render('404-page', {
     logo: 'Damian Cwykiel',
     offer: 'Dev Classes for Kids',
-    title: 'D&D By Damian Cwykiel.',
+    title: 'D&D By Damian Cwykiel ©',
     subtitle: "You're look' for WebDeveloper?",
-    errorMessage: 'Page not found. Sorry O_O'
+    errorMessage: 'Page Not Found. Sorry O_O',
+    errorMessageSubtitle: `There's no page here.`
   })
 })
 
