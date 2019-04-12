@@ -4,7 +4,7 @@
 * the project lives at heroku using Express.js.
 * Please notice that the project's not done yet/ project's in progress and some data may be changed until your recent visit here.
 
-* you can check in at:
+* you can check it at:
 ----------------------
 https://node-web-project.herokuapp.com/
 
