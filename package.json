@@ -17,7 +17,7 @@
     "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.0",
     "nodemon": "^1.18.10"
   }
 }
