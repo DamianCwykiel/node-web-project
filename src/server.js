@@ -86,56 +86,6 @@ app.get('*', (req, res) => {
   })
 })
 
-//create Http server
-// const server = http.createServer(app)
-
-
-//configuration for partial
-// hbs.registerPartials(__dirname + './views/partials');
-
-
-//Express Middleware
-// app.use((req, res, next) => {
-//   const now = new Date().toString();
-//   const log = `${now}: ${req.method} ${req.url}`;
-
-  // console.log(log);
-  // fs.appendFile('server.log', log + '\n');
-//   fs.appendFile('server.log', log + '\n', (err) => {
-//     if(err) {
-//       console.log('unable to append to server.log')
-//     }
-//   });
-//   next();
-// });
-//challenge
-// app.use((req, res, next) => {
-//   res.render('maintenance.hbs');
-// });
-
-
-//helper
-// hbs.registerHelper('getCurrentYear', () => {
-//   return new Date().getFullYear()
-// });
-
-//change text to Upper Letters
-// hbs.registerHelper('screamIt', (text) => {
-//   return text.toUpperCase();
-// });
-//1st hendler
-// app.get('/', (req, res) => {
-//   // res.send('<h1>hello world!</h1>');
-//   res.send({
-//     name: 'Damian Cwykiel',
-//     likes: [
-//       'travelling',
-//       'computers'
-//     ]
-//   });
-// });
-
-
 //server
 app.listen(`${port}`, () => {
   console.log(`Server is alive on port ${port}!`);

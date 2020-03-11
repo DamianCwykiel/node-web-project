@@ -1,34 +1,44 @@
 .button {
+  font-weight: 900;
   height: 5rem;
-  width: 10rem;
-  font-weight: 900; 
+  width: 10rem; 
 }
 
 #courses-button {
   border: 1px solid $medium-red;
   border-radius: 5px;
   background: transparent;
-  color: $white;
   font-size: 18px;
   font-weight: 600;
-  position: static;
-  margin: 25px 10rem; 
+  position: relative;
+  top: 80%;
+  margin: 25px 2rem; 
+  width: 10rem;
   &:hover {
     background: $medium-red;
     cursor: pointer;
     transition: 0.5s linear;
   }
+  a {
+    color: white;
+  }
 }
 
 #blog-button {
-  @extend #courses-button;
   background: $crimson;
+  border: none;
+  border-left: 15px solid darken($crimson, 10%);
+  color: $white;
   font-size: 14px;
   height: 4rem;
+  position: relative;
+  outline: 0;
   width: 10rem; 
   &:hover{
     animation: shake 0.5s;
-    animation-iteration-count: 35s;
+    animation-iteration-count: 5s;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
   }
 }
 
@@ -103,27 +113,38 @@
 }
 
 #message {
+  border: none;
+  border-radius: 8px 8px;
   height: 4rem;
   margin: 25px 10rem;
+  outline: 0; 
   width: 8rem; 
   &:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 35s;
+    animation-iteration-count: 5s;
     cursor: pointer; 
+    outline: 0; 
+    transition: 0.3s ease-in-out;
   }
 }
 
 #newsletter {
-  color: $crimson;
-  font-size: 15px;
+  color: $white;
+  background-color:darken($dark-gold, 10%);
+  border: 2px solid darken($dark-gold, 20%);
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   margin: -10rem .8rem;
   height: 4rem;
   width: 10rem;
-  font-weight: 900; 
+  outline: 0; 
   &:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 35s;
+    animation-iteration-count: 5s;
     cursor: pointer; 
+    outline: 0; 
+    transition: 0.3s ease-in-out;
   }
 } 
 

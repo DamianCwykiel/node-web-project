@@ -35,7 +35,7 @@ body {
 
 nav {
   align-items: center;
-  background: gray;
+  background: #eeeed5;
   border-bottom: 2px solid goldenrod;
   display: inline-grid;
   grid-template-columns: 60% 10% 10% 15% 15%;
@@ -43,11 +43,11 @@ nav {
   height: 8rem;
   justify-content: flex-end;
   padding: 3rem 3rem;
-  position: relative;
+  position: fixed;
   text-align: center;
   font-weight: 700;
   width: 100vw;
-  z-index: 2; }
+  z-index: 1; }
 
 .top-nav-ul {
   align-content: center;
@@ -57,38 +57,32 @@ nav {
   justify-content: left; }
 
 #logo-title > a {
-  color: gold;
+  color: #eed28b;
   font-size: 37px;
   padding-left: 2rem;
   text-decoration: hidden; }
 
 #logo-subtitle, h2 {
-  color: blue;
+  color: #e4b849;
   font-size: 16px;
   font-weight: 750; }
 
 a {
   align-content: center;
-  color: #fff;
+  color: #c4941d;
   font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  letter-spacing: 2px; }
 
 .a-tag {
   color: #000;
   font-size: 1rem;
   font-weight: 700; }
 
-li.offer:hover {
-  border: 1px solid #fff;
-  background: #f10505;
-  cursor: pointer;
-  transform: scale(1.03);
-  transition: 0.4s ease-in-out; }
-
 li > a:hover {
-  opacity: .8; }
+  color: #eed28b; }
 
 p {
   padding: 1rem 0; }
@@ -107,38 +101,40 @@ h3 {
   margin: .5rem auto; }
 
 .wrapper {
-  background: linear-gradient(to left, red, gold);
-  border-bottom: 2px solid goldenrod;
+  background: linear-gradient(to left top, red, gold);
+  border-bottom: 1px solid goldenrod;
+  background-size: contain;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  height: 100vh;
+  min-height: 100vh;
+  top: 2rem;
   position: relative;
-  width: 100vw;
-  z-index: 1; }
-
-.continer, main {
-  width: 100vw;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); }
+  justify-items: flex-start;
+  max-width: 100vw;
+  z-index: 0; }
 
 .main-content {
-  align-items: center;
-  display: inline-flex;
+  align-content: left;
+  display: flex;
   flex-direction: column;
-  flex-grow: 5;
-  width: 100vw;
-  z-index: 1; }
+  max-width: 100vw;
+  justify-items: left;
+  top: 20vh;
+  z-index: 0;
+  padding-bottom: 10rem; }
 
 footer {
-  background-color: gray;
-  border-top: 2px solid goldenrod;
+  background-color: #fff;
+  border-top: 1px solid goldenrod;
   color: #fff;
   display: flex;
   flex-direction: row;
-  height: 15rem;
+  min-height: 15rem;
   justify-content: center;
   position: relative;
   width: 100vw; }
   footer p {
+    color: gray;
     font-size: 11px;
     font-style: italic;
     font-weight: 800;
@@ -155,38 +151,49 @@ footer {
   nav {
     display: flex;
     flex-direction: column;
-    height: 50vh; }
+    max-height: 40vh; }
   .top-nav-ul {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    max-height: 40vh; } }
 
 .button {
+  font-weight: 900;
   height: 5rem;
-  width: 10rem;
-  font-weight: 900; }
+  width: 10rem; }
 
-#courses-button, #blog-button {
+#courses-button {
   border: 1px solid rgba(255, 0, 0, 0.856);
   border-radius: 5px;
   background: transparent;
-  color: #fff;
   font-size: 18px;
   font-weight: 600;
-  position: static;
-  margin: 25px 10rem; }
-  #courses-button:hover, #blog-button:hover {
+  position: relative;
+  top: 80%;
+  margin: 25px 2rem;
+  width: 10rem; }
+  #courses-button:hover {
     background: rgba(255, 0, 0, 0.856);
     cursor: pointer;
     transition: 0.5s linear; }
+  #courses-button a {
+    color: white; }
 
 #blog-button {
   background: crimson;
+  border: none;
+  border-left: 15px solid #ad102f;
+  color: #fff;
   font-size: 14px;
   height: 4rem;
+  position: relative;
+  outline: 0;
   width: 10rem; }
   #blog-button:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 35s; }
+    animation-iteration-count: 5s;
+    transition: 0.5s ease-in-out;
+    cursor: pointer; }
 
 .contact-side-icon {
   width: 60px;
@@ -248,25 +255,36 @@ footer {
     transition: 0.3s ease-in-out; }
 
 #message {
+  border: none;
+  border-radius: 8px 8px;
   height: 4rem;
   margin: 25px 10rem;
+  outline: 0;
   width: 8rem; }
   #message:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 35s;
-    cursor: pointer; }
+    animation-iteration-count: 5s;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.3s ease-in-out; }
 
 #newsletter {
-  color: crimson;
-  font-size: 15px;
+  color: #fff;
+  background-color: #ae8319;
+  border: 2px solid #816213;
+  border-radius: 8px;
+  font-size: 1rem;
+  letter-spacing: 2px;
   margin: -10rem .8rem;
   height: 4rem;
   width: 10rem;
-  font-weight: 900; }
+  outline: 0; }
   #newsletter:hover {
     animation: shake 0.5s;
-    animation-iteration-count: 35s;
-    cursor: pointer; }
+    animation-iteration-count: 5s;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.3s ease-in-out; }
 
 @keyframes shake {
   0% {
@@ -294,19 +312,33 @@ footer {
 
 #article {
   align-items: justify;
+  border-right: 1px solid #555;
   color: #fff;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: calc(50%, -20px);
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 160%;
-  padding: 4rem 0;
-  justify-items: justify;
-  text-align: center; }
+  padding: 4rem 2rem 0 0;
+  text-align: right;
+  width: 100%; }
+  #article h4 {
+    position: relative;
+    top: 25%; }
+  #article h1 {
+    position: relative;
+    top: 15%;
+    font-size: 2.5rem;
+    line-height: 120%; }
 
 #figure {
-  padding: 1rem 0;
+  background-size: contain;
+  padding: 10rem 2rem;
   position: static;
-  text-align: center;
+  text-align: left;
   width: 100%; }
 
 .img-icons-container, .img-arrow-container {
@@ -321,20 +353,29 @@ footer {
 .img-icons {
   border: none;
   height: 2rem;
-  position: static;
   width: 3rem; }
   .img-icons:hover {
     cursor: pointer;
     transition: 0.5s ease-in-out;
     transform: translateY(5px); }
 
+.blog-img {
+  background-size: contain;
+  height: 15rem;
+  width: 10vw; }
+
 #arrow-down {
   height: 2rem;
+  position: absolute;
   width: 2rem; }
 
 .profile-img {
-  border: 2px solid gray;
-  margin: 2rem 0; }
+  border: none;
+  border-bottom: 2px solid rgba(255, 0, 0, 0.4);
+  background-size: contain; }
+
+.projects-img {
+  cursor: pointer; }
 
 .contact-section {
   margin: 2rem 2rem;
@@ -372,6 +413,7 @@ footer {
   align-items: center;
   background: url("./img/2.jpg") no-repeat center center;
   background-size: cover;
+  border-top: 2px solid goldenrod;
   color: #fff;
   height: 30rem;
   padding: 10rem 0;
@@ -389,20 +431,31 @@ footer {
   margin: .5rem 1.2rem;
   list-style-type: none; }
 
-.courses-container {
+.courses-container, .blog-container {
   align-items: center;
   width: 100vw; }
 
-.courses-items-title, #blog-title, .projects-items-title {
+.blog-container {
+  padding-top: 5rem; }
+
+.courses-items-title, .projects-items-title, #blog-title {
   background: #eeeed5;
-  color: yellowgreen;
+  color: goldenrod;
   display: inline-grid;
   grid-column: 1/3;
+  height: 10rem;
   justify-content: center;
   padding: 5rem 5rem;
-  width: 100vw; }
+  width: 100vw;
+  margin: 5rem 0; }
+
+.projects-items-title {
+  margin-bottom: 5rem; }
 
 #blog-title p {
+  color: #666666;
+  font-size: .9rem;
+  font-weight: 600;
   text-align: center; }
 
 #error {
@@ -434,7 +487,7 @@ footer {
   text-align: center;
   padding: 0 auto;
   margin: 1.2rem 10rem;
-  width: 60%; }
+  width: 40%; }
   .courses-item span, #blog span {
     color: rgba(255, 0, 0, 0.856);
     font-size: 1.2rem;
@@ -449,16 +502,16 @@ footer {
   transition: 0.4s ease-in-out; }
 
 #blog {
-  background: #eeeed5;
+  background: goldenrod;
   border: none;
-  border-left: 6px solid #007bb5;
+  border-left: 12px solid #b39700;
   height: 34rem;
   margin: 2rem auto;
   padding: 2rem 4rem;
   text-align: left;
-  width: 55vw; }
+  width: calc(90rem / 2); }
   #blog h1 {
-    color: #555;
+    color: #fff;
     font-size: 26px;
     padding: 1rem 0; }
   #blog h3 {
@@ -480,6 +533,10 @@ footer {
   grid-column-gap: 3rem;
   justify-content: center;
   word-break: break-all; }
+
+.projects-item {
+  border: 1.5px solid goldenrod;
+  background: gold; }
 
 #project {
   height: 20rem;
@@ -539,4 +596,4 @@ footer {
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  width: 60vw; }
+  width: 30vw; }

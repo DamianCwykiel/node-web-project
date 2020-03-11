@@ -1,6 +1,6 @@
 nav {
     align-items: center;
-    background: $gray;
+    background: $antique-white;
     border-bottom: 2px solid $dark-gold;
     display: inline-grid;
     grid-template-columns: 60% 10% 10% 15% 15%;
@@ -8,11 +8,11 @@ nav {
     height: 8rem;
     justify-content: flex-end;
     padding: 3rem 3rem;
-    position: relative;
+    position: fixed;
     text-align: center;
     font-weight: 700;
     width: 100vw;
-    z-index: 2; 
+    z-index: 1; 
 }
 
 .top-nav-ul {
@@ -24,25 +24,26 @@ nav {
 }
 
 #logo-title > a {
-    color: $medium-gold;
+    color: lighten($dark-gold, 25%);
     font-size: 37px;
     padding-left: 2rem;
     text-decoration: hidden; 
 }
   
 #logo-subtitle {
-    color: $blue;
+    color: lighten($dark-gold, 10%);
     font-size: 16px;
     font-weight: 750;  
 } 
  
 a {
     align-content: center;
-    color: $white;
+    color: darken($dark-gold, 5%);
     font-size: 1.1rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
+    letter-spacing: 2px;
 }
   
 .a-tag {
@@ -51,15 +52,15 @@ a {
     font-weight: 700; 
 }
   
-li.offer:hover {
-    border: 1px solid $white;
-    background: $light-red;
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: 0.4s ease-in-out; 
-}
+// li.offer:hover {
+//     border: 1px solid $white;
+//     background: $light-red;
+//     cursor: pointer;
+//     transform: scale(1.03);
+//     transition: 0.4s ease-in-out; 
+// }
 li > a:hover {
-    opacity: .8; 
+    color: lighten($dark-gold, 25%);
 }
 
 p {
@@ -81,22 +82,4 @@ h3 {
     color: $medium-green;
     font-size: 20px;
     margin: .5rem auto; 
-} 
-
-// .loader {
-//     border-top: 3px solid blue;
-//   border-right: 3px solid green;
-//   border-bottom: 3px solid red;
-//   border-left: 3px solid pink;
-//     border-radius: 50%;
-//     position:relative;
-//     width: 80px;
-//     height: 80px;
-//     animation: spin 2s linear infinite;
-//     z-index: -1;
-//   }
-  
-//   @keyframes spin {
-//     0% { transform: rotate(0deg); }
-//     100% { transform: rotate(360deg); }
-//   }
+}

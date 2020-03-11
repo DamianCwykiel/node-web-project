@@ -2,23 +2,30 @@
   "name": "web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev" : "nodemon src/server.js -e js,hbs,scss",
-    "scss": "node-sass -w scss/ -o public/css"
+    "dev": "nodemon src/server.js -e js,hbs,scss",
+    "scss": "node-sass -w scss/ -o public/css",
+    "build:dev": "webpack --watch",
+    "build:prod": "webpack --mode production",
+    "dev-server": "webpack-dev-server --mode development"
   },
   "author": "Damian Cwykiel",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^3.4.2",
     "express": "^4.16.4",
     "hbs": "^4.0.1",
+    "path": "^0.12.7",
     "request": "^2.88.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
     "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.10"
   }
 }
